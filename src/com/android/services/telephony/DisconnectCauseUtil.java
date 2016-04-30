@@ -126,8 +126,6 @@ public class DisconnectCauseUtil {
             case android.telephony.DisconnectCause.DIAL_MODIFIED_TO_SS:
             case android.telephony.DisconnectCause.DIAL_MODIFIED_TO_DIAL:
             case android.telephony.DisconnectCause.ERROR_UNSPECIFIED:
-            case android.telephony.DisconnectCause.LOCAL_LOW_BATTERY:
-            case android.telephony.DisconnectCause.LOW_BATTERY:
                 return DisconnectCause.ERROR;
 
             case android.telephony.DisconnectCause.DIALED_MMI:
@@ -215,11 +213,6 @@ public class DisconnectCauseUtil {
             case android.telephony.DisconnectCause.INVALID_NUMBER:
             case android.telephony.DisconnectCause.UNOBTAINABLE_NUMBER:
                 resourceId = R.string.callFailed_unobtainable_number;
-                break;
-
-            case android.telephony.DisconnectCause.LOCAL_LOW_BATTERY:
-            case android.telephony.DisconnectCause.LOW_BATTERY:
-                resourceId = R.string.callFailed_low_battery;
                 break;
 
             default:
@@ -331,14 +324,6 @@ public class DisconnectCauseUtil {
                 // TODO: Need to bring up the "Missing Voicemail Number" dialog, which
                 // will ultimately take us to the Call Settings.
                 resourceId = R.string.incall_error_missing_voicemail_number;
-                break;
-
-            case android.telephony.DisconnectCause.LOW_BATTERY:
-                resourceId = R.string.incall_error_low_battery;
-                break;
-
-            case android.telephony.DisconnectCause.LOCAL_LOW_BATTERY:
-                resourceId = R.string.incall_error_local_low_battery;
                 break;
 
             case android.telephony.DisconnectCause.OUTGOING_CANCELED:
